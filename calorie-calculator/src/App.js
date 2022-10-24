@@ -9,11 +9,12 @@ import Result from "./components/Result";
 
 function App() {
   const showInputValueWeight = (e) => {
+    console.log(Number(e.target.value) * 10);
+    //próbuję tworzyć zmienną / propsa, żeby przekazać późnmiej dane do innej funkcji:
     const peekaBoo = e.target.value;
     const peekaBooTwo = Number(peekaBoo * 10);
     return peekaBooTwo;
     // Number(peekaBoo * 10);
-    // console.log(Number(e.target.value) * 10);
     // console.log(Number(peekaBoo * 10));
   };
 
