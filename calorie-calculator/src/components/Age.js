@@ -1,3 +1,5 @@
+import React from "react";
+
 const Age = ({ inputValueAge }) => {
   return (
     <input

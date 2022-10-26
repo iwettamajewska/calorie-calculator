@@ -1,3 +1,5 @@
+import React from "react";
+
 const Weight = ({ inputValueWeight }) => {
   return (
     <input

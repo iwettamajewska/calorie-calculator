@@ -1,3 +1,6 @@
+import React from "react";
+import Option from "./Option";
+
 // import useState from "react";
 
 const Activity = () => {
@@ -7,14 +10,47 @@ const Activity = () => {
 
   return (
     <select
-      className="activity"
+      className="select"
+      placeholder="Wybierz twoją aktywność"
       //   value={selectActivity}
       //   onChange={(e) => {
       //     const selectedActivity = e.target.value;
       //     setActivity(selectedActivity);
       //   }}
     >
-      <option className="option" value="1,2">
+      <Option
+        value
+        disabled
+        selected
+        hidden
+        optionText={"Wybierz twoją aktywność"}
+      />
+      <Option
+        value={"1,2"}
+        optionText={"leżący w łóżku, bardzo niska aktywność"}
+      />
+      <Option
+        value={"1,3"}
+        optionText={"praca siedząca, minimalna aktywność w ciągu dnia"}
+      />
+      <Option
+        value={"1,4"}
+        optionText={
+          "praca siedzącą, średnia akwtyność, lekkie treningi 3x w tygodniu"
+        }
+      />
+      <Option
+        value={"1,5"}
+        optionText={"sporo ruchu w ciągu dnia, lekkie treningi"}
+      />
+      <Option
+        value={"1,6"}
+        optionText={" sporo ruchu w ciągu dnia, regularne treningi"}
+      />
+      <Option value={"1,75"} optionText={"praca fizyczna, lekkie treningi"} />
+      <Option value={"2"} optionText={"praca fizyczna, ciężkie treningi"} />
+
+      {/* <option className="option" value="1,2">
         leżący w łóżku, bardzo niska aktywność
       </option>
       <option className="option" value="1,3">
@@ -34,7 +70,7 @@ const Activity = () => {
       </option>
       <option className="option" value="2">
         praca fizyczna, ciężkie treningi
-      </option>
+      </option> */}
     </select>
   );
 };
