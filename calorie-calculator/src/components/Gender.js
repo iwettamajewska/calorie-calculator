@@ -17,10 +17,8 @@ const Gender = ({ onChange }) => {
       //     setSelectGender(selectedGender);
       //   }}
     >
-      <slot name="person-name">NAME MISSING</slot>
-
-      <Option value disabled selected hidden optionText={"Płeć"} />
-
+      {/* <slot name="person-name">NAME MISSING</slot>
+       <Option value disabled selected hidden optionText={"Płeć"} /> */}
       <Option value={"female"} optionText={"kobieta"} />
       <Option value={"male"} optionText={"mężczyzna"} />
       {/* <option className="option" value="female">

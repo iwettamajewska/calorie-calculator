@@ -3,13 +3,14 @@ import Option from "./Option";
 
 // import useState from "react";
 
-const Activity = () => {
+const Activity = ({ onChange }) => {
   //   const [selectActivity, setActivity] = useState(
   //     "leżący w łóżku, bardzo niska aktywność"
   //   );
 
   return (
     <select
+      onChange={onChange}
       className="select"
       placeholder="Wybierz twoją aktywność"
       //   value={selectActivity}

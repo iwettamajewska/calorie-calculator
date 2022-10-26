@@ -9,12 +9,17 @@ import Result from "./components/Result";
 import Input from "./components/Input";
 // import SelectYesorNo from "./components/SelectYesorNo";
 import { useState } from "react";
-import Slot from "./components/Slot";
+// import Slot from "./components/Slot";
 
 function App() {
   const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [age, setAge] = useState(0);
   const [result, setResult] = useState(0);
   const [gender, setGender] = useState("female");
+  const [activity, setActivity] = useState(
+    "leżący w łóżku, bardzo niska aktywność"
+  );
 
   const getInputValueWeight = (e) => {
     console.log(Number(e.target.value) * 10);
@@ -29,16 +34,23 @@ function App() {
 
   const getInputValueHeight = (e) => {
     console.log(Number(e.target.value) * 6.25);
+    console.log(height);
   };
 
   const getInputValueAge = (e) => {
     console.log(Number(e.target.value) * 5);
+    console.log(age);
     return Number(e.target.value) * 5;
   };
 
   const getGender = (e) => {
     setGender(e.target.value);
     console.log(gender);
+  };
+
+  const getActivity = (e) => {
+    setActivity(e.target.value);
+    console.log(activity);
   };
 
   const getCalculate = ({ peekaBooTwo }) => {
@@ -69,14 +81,14 @@ function App() {
       <p>Wiek</p>
       <Age inputValueAge={getInputValueAge} />
       <p>Wybierz Twoją aktywność</p>
-      <Activity />
+      <Activity onChange={getActivity} />
       <Button calculate={getCalculate} />
       <Result /*result={getCalculate} */ />
       <p>zaimportowane komponenty input</p>
       <Input placeholder={77} min={2} inputValueWeight={getInputValueWeight} />
       <Input placeholder={78} min={6} inputValueHeight={getInputValueHeight} />
       <Input placeholder={79} min={9} inputValueAge={getInputValueAge} />
-      <Slot />
+      {/* <Slot /> */}
     </div>
   );
 }
