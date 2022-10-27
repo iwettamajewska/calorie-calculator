@@ -8,6 +8,13 @@ const Activity = ({ onChange }) => {
   //     "leżący w łóżku, bardzo niska aktywność"
   //   );
 
+  const attributesDisabledHidden = {
+    value: "",
+    disabled: "",
+    selected: "",
+    hidden: "",
+  };
+
   return (
     <select
       onChange={onChange}
@@ -19,11 +26,11 @@ const Activity = ({ onChange }) => {
       //     setActivity(selectedActivity);
       //   }}
     >
+      {/* <option value disabled selected hidden>
+        Wybierz twoją aktywność
+      </option> */}
       <Option
-        value
-        disabled
-        selected
-        hidden
+        {...attributesDisabledHidden}
         optionText={"Wybierz twoją aktywność"}
       />
       <Option
