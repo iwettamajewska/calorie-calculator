@@ -1,12 +1,6 @@
 import React from "react";
 
-const Input = ({
-  placeholder,
-  min,
-  inputValueWeight,
-  inputValueHeight,
-  inputValueAge,
-}) => {
+const Input = ({ placeholder, min, onInput }) => {
   return (
     <input
       type="number"
@@ -17,7 +11,7 @@ const Input = ({
       className="form-control shadow amount-of-money"
       aria-label="Sizing example input"
       aria-describedby="inputGroup-sizing-default"
-      onInput={[inputValueWeight, inputValueHeight, inputValueAge]}
+      onInput={onInput}
     />
   );
 };

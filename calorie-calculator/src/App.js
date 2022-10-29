@@ -1,8 +1,5 @@
 import "./App.css";
 import Gender from "./components/Gender";
-import Weight from "./components/Weight";
-import Height from "./components/Height";
-import Age from "./components/Age";
 import Activity from "./components/Activity";
 import Button from "./components/Button";
 import Result from "./components/Result";
@@ -20,9 +17,11 @@ function App() {
   const [activity, setActivity] = useState(
     "leżący w łóżku, bardzo niska aktywność"
   );
+  const numberCalculateWoman = 161;
+  const numerCalculateMen = 5;
 
   const getInputValueWeight = (e) => {
-    console.log(Number(e.target.value) * 10);
+    console.log(Number(e.target.value) /* * 10 */);
     //próbuję tworzyć zmienną / propsa, żeby przekazać późnmiej dane do innej funkcji:
     // const peekaBoo = e.target.value;
     // const peekaBooTwo = Number(peekaBoo * 10);
@@ -33,14 +32,14 @@ function App() {
   };
 
   const getInputValueHeight = (e) => {
-    console.log(Number(e.target.value) * 6.25);
+    console.log(Number(e.target.value) /* * 6.25 */);
     console.log(height);
   };
 
   const getInputValueAge = (e) => {
-    console.log(Number(e.target.value) * 5);
+    console.log(Number(e.target.value) /* * 5 */);
     console.log(age);
-    return Number(e.target.value) * 5;
+    return Number(e.target.value) /* * 5 */;
   };
 
   const getGender = (e) => {
@@ -49,15 +48,16 @@ function App() {
   };
 
   const getActivity = (e) => {
-    setActivity(e.target.value);
+    setActivity(Number(e.target.value));
     console.log(activity);
   };
 
-  const getCalculate = ({ peekaBooTwo }) => {
+  const getCalculate = () => {
     console.log("clicked button");
-    console.log(Number({ peekaBooTwo }) * 10);
-    console.log({ getInputValueAge });
-    const result = weight;
+    console.log(Number(weight));
+    console.log(Number(setWeight));
+    // const result = weight + height + age;
+    // console.log(result);
     return result;
 
     // mogę też result trzymać jako stan:
@@ -75,20 +75,15 @@ function App() {
       <p>Wybierz płeć</p>
       <Gender onChange={getGender} />
       <p>Masa ciała (kg)</p>
-      <Weight inputValueWeight={getInputValueWeight} />
+      <Input placeholder={77} min={1} onInput={getInputValueWeight} />
       <p>Wzrost (cm)</p>
-      <Height inputValueHeight={getInputValueHeight} />
+      <Input placeholder={78} min={2} onInput={getInputValueHeight} />
       <p>Wiek</p>
-      <Age inputValueAge={getInputValueAge} />
+      <Input placeholder={79} min={3} onInput={getInputValueAge} />
       <p>Wybierz Twoją aktywność</p>
-      <Activity onChange={getActivity} />
-      <Button calculate={getCalculate} />
-      <Result /*result={getCalculate} */ />
-      <p>zaimportowane komponenty input</p>
-      <Input placeholder={77} min={2} inputValueWeight={getInputValueWeight} />
-      <Input placeholder={78} min={6} inputValueHeight={getInputValueHeight} />
-      <Input placeholder={79} min={9} inputValueAge={getInputValueAge} />
-      {/* <Slot /> */}
+      <Activity onChange={getActivity} activity={activity} />
+      <Button onClick={getCalculate} /* calculate={getCalculate} */ />
+      <Result /* result={getCalculate} */ />
     </div>
   );
 }

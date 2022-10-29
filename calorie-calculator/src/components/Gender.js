@@ -1,11 +1,8 @@
 import React from "react";
 import Option from "./Option";
 
-// import useState from "react";
-
 const Gender = ({ onChange }) => {
   //   const [selectGender, setSelectGender] = useState("kobieta");
-
   return (
     <select
       onChange={onChange}
