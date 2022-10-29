@@ -1,4 +1,3 @@
-import React from "react";
 import Option from "./Option";
 
 const Gender = ({ onChange }) => {
@@ -16,8 +15,8 @@ const Gender = ({ onChange }) => {
     >
       {/* <slot name="person-name">NAME MISSING</slot>
        <Option value disabled selected hidden optionText={"Płeć"} /> */}
-      <Option value={"female"} optionText={"kobieta"} />
-      <Option value={"male"} optionText={"mężczyzna"} />
+      <Option sex={"female"} value={-161} optionText={"kobieta"} />
+      <Option sex={"male"} value={5} optionText={"mężczyzna"} />
       {/* <option className="option" value="female">
         kobieta
       </option>

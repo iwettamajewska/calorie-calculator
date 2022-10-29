@@ -1,8 +1,7 @@
-import React from "react";
-
-const Result = () => {
+const Result = ({ result }) => {
   return (
     <input
+      value={result}
       className="form-control shadow result-pln"
       placeholder="wynik"
       readOnly

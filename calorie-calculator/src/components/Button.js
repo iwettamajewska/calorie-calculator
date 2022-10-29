@@ -1,6 +1,4 @@
-import React from "react";
-
-const Button = ({ onClick, calculate }) => {
+const Button = ({ onClick }) => {
   return (
     <button onClick={onClick} className="btn" type="buttton">
       Oblicz

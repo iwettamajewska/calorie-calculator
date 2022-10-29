@@ -1,4 +1,3 @@
-import React from "react";
 import Option from "./Option";
 
 const Activity = ({ onChange, activity }) => {
@@ -11,7 +10,7 @@ const Activity = ({ onChange, activity }) => {
 
   const options = [
     { tittle: "leżący w łóżku, bardzo niska aktywność", pal: 1.2 },
-    { tittle: "leżący w łóżku, bardzo niska aktywność", pal: 1.3 },
+    { tittle: "leżącyddddd w łóżku, bardzo niska aktywność", pal: 1.3 },
     { tittle: "praca siedząca, minimalna aktywność w ciągu dnia", pal: 1.4 },
     {
       tittle:
@@ -20,7 +19,7 @@ const Activity = ({ onChange, activity }) => {
     },
     { tittle: "sporo ruchu w ciągu dnia, lekkie treningi", pal: 1.6 },
     { tittle: "praca fizyczna, lekkie treningi", pal: 1.75 },
-    { tittle: "praca fizyczna, ciężkie treningi", pal: 1.2 },
+    { tittle: "praca fizyczna, ciężkie treningi", pal: 2.2 },
   ];
 
   return (
