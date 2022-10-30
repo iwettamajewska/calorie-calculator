@@ -72,10 +72,6 @@ function App() {
 
 export default App;
 
-// PPM (kobiety) =  (10 x masa ciała [kg])+(6,25 x wzrost [cm])-(5 x [wiek]) – 161
-
-// PPM (mężczyźni) = (10 x masa ciała [kg])+(6, 25 x wzrost [cm])-(5 x [wiek]) + 5
-
 // Activity:
 // 1,2
 // 1,3
