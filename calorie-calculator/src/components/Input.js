@@ -7,8 +7,8 @@ const Input = ({ placeholder, min, onInput }) => {
       // value="100"
       placeholder={placeholder}
       className="input"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-default"
+      // aria-label="Sizing example input"
+      // aria-describedby="inputGroup-sizing-default"
       onInput={onInput}
     />
   );

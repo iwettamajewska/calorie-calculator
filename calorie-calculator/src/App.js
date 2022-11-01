@@ -52,27 +52,44 @@ function App() {
     setResult(`${sum} kcal`);
   };
 
+  const showText = ({ sum, placeholder }) => {
+    sum = 0 ? (placeholder = "Wynik") : sum;
+  };
+
+  // sum = 0 ? (placeholder = "Wynik") : sum;
+
   return (
     <div className="container">
       <h1 className="top-calculator-cpm-text">Kalkulator CPM</h1>
       <h2 className="top-calculate-text">
         Oblicz swoją całkowitą przemianę materii
       </h2>
-      <p className="text">Wybierz płeć</p>
+      {/* <p className="text">Wybierz płeć</p> */}
       <Gender onChange={getGender} />
-      <p className="text">Masa ciała (kg)</p>
-      <Input placeholder={77} min={1} onInput={getInputValueWeight} />
-      <p className="text">Wzrost (cm)</p>
-      <Input placeholder={78} min={2} onInput={getInputValueHeight} />
-      <p className="text">Wiek</p>
-      <Input placeholder={79} min={3} onInput={getInputValueAge} />
-      <p className="text">Wybierz Twoją aktywność</p>
+      {/* <p className="text">Masa ciała (kg)</p> */}
+      <Input
+        placeholder={`Masa ciała (kg)`}
+        min={1}
+        onInput={getInputValueWeight}
+      />
+      {/* <p className="text">Wzrost (cm)</p> */}
+      <Input
+        placeholder={`Wzrost (cm)`}
+        min={2}
+        onInput={getInputValueHeight}
+      />
+      {/* <p className="text">Wiek</p> */}
+      <Input placeholder={`Wiek`} min={3} onInput={getInputValueAge} />
+      {/* <p className="text">Wybierz Twoją aktywność</p> */}
       <Activity onChange={getActivity} activity={activity} />
-      <div className="btn-container">
-        <Button onClick={getCalculate} /* calculate={getCalculate} */ />
-      </div>
-      <p className="text result-text">Wynik</p>
-      <Result result={result} /* result={getCalculate} */ />
+      {/* <div className="btn-container"> */}
+      <Button onClick={getCalculate} /* calculate={getCalculate} */ />
+      {/* </div> */}
+      {/* <p className="text result-text">Wynik</p> */}
+      <Result
+        placeholder={showText}
+        result={result} /* result={getCalculate} */
+      />
       <Explanation />
     </div>
   );

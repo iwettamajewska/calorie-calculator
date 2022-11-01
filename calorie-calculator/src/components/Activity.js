@@ -9,6 +9,13 @@ const Activity = ({ onChange, activity }) => {
   // };
 
   const options = [
+    // {
+    //   tittle: "Wybierz twoją aktywność",
+    //   pal: "",
+    //   disabled: true,
+    //   selected: true,
+    //   hidden: true,
+    // },
     { tittle: "leżący w łóżku, bardzo niska aktywność", pal: 1.2 },
     { tittle: "leżącyddddd w łóżku, bardzo niska aktywność", pal: 1.3 },
     { tittle: "praca siedząca, minimalna aktywność w ciągu dnia", pal: 1.4 },
@@ -28,7 +35,11 @@ const Activity = ({ onChange, activity }) => {
       value={activity}
       className="select activity-select"
       placeholder="Wybierz twoją aktywność"
+      required
     >
+      <option disabled={true} selected={true} hidden={true} value="">
+        Wybierz twoją aktywność
+      </option>
       {options.map((option, index) => {
         return (
           <Option value={option.pal} optionText={option.tittle} key={index} />

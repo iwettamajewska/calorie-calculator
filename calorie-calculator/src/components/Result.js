@@ -1,9 +1,9 @@
 const Result = ({ result }) => {
   return (
     <input
+      // placeholder={placeholder}
       value={result}
       className="input result-input"
-      placeholder="wynik"
       readOnly
     />
   );
