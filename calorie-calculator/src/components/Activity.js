@@ -26,7 +26,7 @@ const Activity = ({ onChange, activity }) => {
     <select
       onChange={onChange}
       value={activity}
-      className="select"
+      className="select activity-select"
       placeholder="Wybierz twoją aktywność"
     >
       {options.map((option, index) => {

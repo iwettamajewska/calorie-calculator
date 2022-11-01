@@ -6,7 +6,7 @@ const Input = ({ placeholder, min, onInput }) => {
       required
       // value="100"
       placeholder={placeholder}
-      className="form-control shadow amount-of-money"
+      className="input"
       aria-label="Sizing example input"
       aria-describedby="inputGroup-sizing-default"
       onInput={onInput}

@@ -2,7 +2,7 @@ const Result = ({ result }) => {
   return (
     <input
       value={result}
-      className="form-control shadow result-pln"
+      className="input result-input"
       placeholder="wynik"
       readOnly
     />

@@ -4,6 +4,7 @@ import Activity from "./components/Activity";
 import Button from "./components/Button";
 import Result from "./components/Result";
 import Input from "./components/Input";
+import Explanation from "./Explanation";
 import { useState } from "react";
 
 function App() {
@@ -48,24 +49,31 @@ function App() {
     const sum = (weight + height - age + activity + gender) * activity;
     console.log(sum);
 
-    setResult(sum);
+    setResult(`${sum} kcal`);
   };
 
   return (
-    <div>
-      <h1>Kalkulator CPM - Oblicz swoje CPM (Całkowita Przemiana Materii)</h1>
-      <p>Wybierz płeć</p>
+    <div className="container">
+      <h1 className="top-calculator-cpm-text">Kalkulator CPM</h1>
+      <h2 className="top-calculate-text">
+        Oblicz swoją całkowitą przemianę materii
+      </h2>
+      <p className="text">Wybierz płeć</p>
       <Gender onChange={getGender} />
-      <p>Masa ciała (kg)</p>
+      <p className="text">Masa ciała (kg)</p>
       <Input placeholder={77} min={1} onInput={getInputValueWeight} />
-      <p>Wzrost (cm)</p>
+      <p className="text">Wzrost (cm)</p>
       <Input placeholder={78} min={2} onInput={getInputValueHeight} />
-      <p>Wiek</p>
+      <p className="text">Wiek</p>
       <Input placeholder={79} min={3} onInput={getInputValueAge} />
-      <p>Wybierz Twoją aktywność</p>
+      <p className="text">Wybierz Twoją aktywność</p>
       <Activity onChange={getActivity} activity={activity} />
-      <Button onClick={getCalculate} /* calculate={getCalculate} */ />
+      <div className="btn-container">
+        <Button onClick={getCalculate} /* calculate={getCalculate} */ />
+      </div>
+      <p className="text result-text">Wynik</p>
       <Result result={result} /* result={getCalculate} */ />
+      <Explanation />
     </div>
   );
 }
