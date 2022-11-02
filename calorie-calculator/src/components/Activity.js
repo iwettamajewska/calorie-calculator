@@ -1,21 +1,7 @@
 import Option from "./Option";
 
-const Activity = ({ onChange, activity }) => {
-  // const attributesDisabledHidden = {
-  //   value: "",
-  //   disabled: "",
-  //   selected: "",
-  //   hidden: "",
-  // };
-
+const Activity = ({ onChange, activity, isError }) => {
   const options = [
-    // {
-    //   tittle: "Wybierz twoją aktywność",
-    //   pal: "",
-    //   disabled: true,
-    //   selected: true,
-    //   hidden: true,
-    // },
     { tittle: "leżący w łóżku, bardzo niska aktywność", pal: 1.2 },
     { tittle: "leżącyddddd w łóżku, bardzo niska aktywność", pal: 1.3 },
     { tittle: "praca siedząca, minimalna aktywność w ciągu dnia", pal: 1.4 },
@@ -29,23 +15,36 @@ const Activity = ({ onChange, activity }) => {
     { tittle: "praca fizyczna, ciężkie treningi", pal: 2.2 },
   ];
 
+  const errorColorSelectActivity = isError
+    ? "select activity-select error-blank"
+    : "select activity-select";
+
   return (
-    <select
-      onChange={onChange}
-      value={activity}
-      className="select activity-select"
-      placeholder="Wybierz twoją aktywność"
-      required
-    >
+    <>
+      {isError && <p className="error-text">Uzupełnij dane</p>}
+      <select
+        onChange={onChange}
+        value={activity}
+        className={errorColorSelectActivity}
+        placeholder="Wybierz twoją aktywność"
+        required
+      >
+        {/* <option disabled={true} selected={true} hidden={true} value="">
+        Wybierz płeć
+      </option>
       <option disabled={true} selected={true} hidden={true} value="">
         Wybierz twoją aktywność
-      </option>
-      {options.map((option, index) => {
-        return (
-          <Option value={option.pal} optionText={option.tittle} key={index} />
-        );
-      })}
-    </select>
+      </option> */}
+        <option selected={true} hidden={true} value="">
+          Wybierz swoją aktywność
+        </option>
+        {options.map((option, index) => {
+          return (
+            <Option value={option.pal} optionText={option.tittle} key={index} />
+          );
+        })}
+      </select>
+    </>
   );
 };
 

@@ -12,8 +12,9 @@ function App() {
   const [height, setHeight] = useState(0);
   const [age, setAge] = useState(0);
   const [result, setResult] = useState(0);
-  const [gender, setGender] = useState(-161);
+  const [gender, setGender] = useState(0);
   const [activity, setActivity] = useState(1.2);
+  const [error, setError] = useState(false);
 
   const getInputValueWeight = (e) => {
     // console.log(Number(e.target.value));
@@ -42,19 +43,21 @@ function App() {
     // console.log(activity);
   };
 
-  const getCalculate = () => {
+  const getValidateAndCalculate = () => {
     // console.log("clicked button");
     // console.log(Number(weight));
-
     const sum = (weight + height - age + activity + gender) * activity;
     console.log(sum);
 
+    if (!weight || !height || !age || gender || !activity) {
+      setError(true);
+    }
     setResult(`${sum} kcal`);
   };
 
-  const showText = ({ sum, placeholder }) => {
-    sum = 0 ? (placeholder = "Wynik") : sum;
-  };
+  // const showText = ({ sum, placeholder }) => {
+  //   sum = 0 ? (placeholder = "Wynik") : sum;
+  // };
 
   // sum = 0 ? (placeholder = "Wynik") : sum;
 
@@ -65,32 +68,49 @@ function App() {
         Oblicz swoją całkowitą przemianę materii
       </h2>
       {/* <p className="text">Wybierz płeć</p> */}
-      <Gender onChange={getGender} />
+      <Gender onChange={getGender} isError={error && !gender} />
       {/* <p className="text">Masa ciała (kg)</p> */}
       <Input
         placeholder={`Masa ciała (kg)`}
-        min={1}
+        min={40}
+        max={300}
         onInput={getInputValueWeight}
+        isError={error && !weight}
       />
       {/* <p className="text">Wzrost (cm)</p> */}
       <Input
         placeholder={`Wzrost (cm)`}
-        min={2}
+        min={140}
+        max={250}
         onInput={getInputValueHeight}
+        isError={error && !height}
       />
       {/* <p className="text">Wiek</p> */}
-      <Input placeholder={`Wiek`} min={3} onInput={getInputValueAge} />
+      <Input
+        placeholder={`Wiek`}
+        min={18}
+        max={140}
+        onInput={getInputValueAge}
+        isError={error && !age}
+      />
       {/* <p className="text">Wybierz Twoją aktywność</p> */}
-      <Activity onChange={getActivity} activity={activity} />
+      <Activity
+        onChange={getActivity}
+        activity={activity}
+        isError={error && !activity}
+      />
       {/* <div className="btn-container"> */}
-      <Button onClick={getCalculate} /* calculate={getCalculate} */ />
+      <Button
+        onClick={getValidateAndCalculate} /* calculate={getCalculate} */
+      />
       {/* </div> */}
       {/* <p className="text result-text">Wynik</p> */}
       <Result
-        placeholder={showText}
+        // placeholder={showText}
         result={result} /* result={getCalculate} */
       />
       <Explanation />
+      {/* <p isError={error}>{isError && <p>Uzupełnij wszystkie pola</p>}</p> */}
     </div>
   );
 }
