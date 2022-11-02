@@ -19,9 +19,12 @@ const Gender = ({ onChange, isError }) => {
       >
         {/* <slot name="person-name">NAME MISSING</slot>
        <Option value disabled selected hidden optionText={"Płeć"} /> */}
-        <option selected={true} hidden={true} value="">
-          Wybierz płeć
-        </option>
+        <Option
+          selected={true}
+          hidden={true}
+          value={""}
+          optionText="Wybierz płeć"
+        />
         <Option sex={"female"} value={-161} optionText={"kobieta"} required />
         <Option sex={"male"} value={5} optionText={"mężczyzna"} required />
         {/* <option className="option" value="female">

@@ -13,11 +13,12 @@ function App() {
   const [age, setAge] = useState(0);
   const [result, setResult] = useState(0);
   const [gender, setGender] = useState(0);
-  const [activity, setActivity] = useState(1.2);
+  const [activity, setActivity] = useState(0);
   const [error, setError] = useState(false);
 
   const getInputValueWeight = (e) => {
     // console.log(Number(e.target.value));
+
     setWeight(Number(e.target.value) * 10);
   };
 
@@ -46,7 +47,10 @@ function App() {
   const getValidateAndCalculate = () => {
     // console.log("clicked button");
     // console.log(Number(weight));
-    const sum = (weight + height - age + activity + gender) * activity;
+    const sum = (
+      (weight + height - age + activity + gender) *
+      activity
+    ).toFixed(0);
     console.log(sum);
 
     if (!weight || !height || !age || gender || !activity) {
@@ -67,9 +71,7 @@ function App() {
       <h2 className="top-calculate-text">
         Oblicz swoją całkowitą przemianę materii
       </h2>
-      {/* <p className="text">Wybierz płeć</p> */}
       <Gender onChange={getGender} isError={error && !gender} />
-      {/* <p className="text">Masa ciała (kg)</p> */}
       <Input
         placeholder={`Masa ciała (kg)`}
         min={40}
@@ -77,7 +79,6 @@ function App() {
         onInput={getInputValueWeight}
         isError={error && !weight}
       />
-      {/* <p className="text">Wzrost (cm)</p> */}
       <Input
         placeholder={`Wzrost (cm)`}
         min={140}
@@ -85,7 +86,6 @@ function App() {
         onInput={getInputValueHeight}
         isError={error && !height}
       />
-      {/* <p className="text">Wiek</p> */}
       <Input
         placeholder={`Wiek`}
         min={18}
@@ -93,18 +93,14 @@ function App() {
         onInput={getInputValueAge}
         isError={error && !age}
       />
-      {/* <p className="text">Wybierz Twoją aktywność</p> */}
       <Activity
         onChange={getActivity}
         activity={activity}
         isError={error && !activity}
       />
-      {/* <div className="btn-container"> */}
       <Button
         onClick={getValidateAndCalculate} /* calculate={getCalculate} */
       />
-      {/* </div> */}
-      {/* <p className="text result-text">Wynik</p> */}
       <Result
         // placeholder={showText}
         result={result} /* result={getCalculate} */

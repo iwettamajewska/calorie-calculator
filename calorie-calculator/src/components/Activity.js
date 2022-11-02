@@ -35,9 +35,15 @@ const Activity = ({ onChange, activity, isError }) => {
       <option disabled={true} selected={true} hidden={true} value="">
         Wybierz twoją aktywność
       </option> */}
-        <option selected={true} hidden={true} value="">
+        {/* <option selected={true} hidden={true} value="">
           Wybierz swoją aktywność
-        </option>
+        </option> */}
+        <Option
+          selected={true}
+          hidden={true}
+          value={""}
+          optionText="wybierz swoją aktywność"
+        />
         {options.map((option, index) => {
           return (
             <Option value={option.pal} optionText={option.tittle} key={index} />

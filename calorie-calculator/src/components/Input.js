@@ -7,6 +7,11 @@ const Input = ({ placeholder, min, max, onInput, isError }) => {
   // const Box = ({ name, isError }) => {
   const errorColorInput = isError ? "input error-blank" : "input";
 
+  //   const isNumberKey = (e) => {
+  //     var charCode = (evt.which) ? evt.which : event.keyCode;
+  //     return !(charCode > 31 && (charCode < 48 || charCode > 57));
+  // }
+
   return (
     // <form onInput={handleOnInput(onInput)}>
     <>
