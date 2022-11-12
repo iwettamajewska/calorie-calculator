@@ -1,6 +1,6 @@
 import Option from "./Option";
 
-const Activity = ({ onChange, activity, isError }) => {
+const Activity = ({ onChange, activity }) => {
   const options = [
     { tittle: "leżący w łóżku, bardzo niska aktywność", pal: 1.2 },
     { tittle: "leżącyddddd w łóżku, bardzo niska aktywność", pal: 1.3 },
@@ -15,17 +15,18 @@ const Activity = ({ onChange, activity, isError }) => {
     { tittle: "praca fizyczna, ciężkie treningi", pal: 2.2 },
   ];
 
-  const errorColorSelectActivity = isError
-    ? "select activity-select error-blank"
-    : "select activity-select";
+  // const errorColorSelectActivity = isError
+  //   ? "select activity-select error-blank"
+  //   : "select activity-select";
 
   return (
     <>
-      {isError && <p className="error-text">Uzupełnij dane</p>}
+      {/* {isError && <p className="error-text">Uzupełnij dane</p>} */}
       <select
         onChange={onChange}
         value={activity}
-        className={errorColorSelectActivity}
+        className="select activity-select"
+        // className={errorColorSelectActivity}
         placeholder="Wybierz twoją aktywność"
         required
       >

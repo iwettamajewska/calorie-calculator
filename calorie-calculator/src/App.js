@@ -22,11 +22,14 @@ function App() {
     const { weight, height, age, activity, gender } = event.target;
     event.preventDefault();
 
+    console.log(weight.value);
+
     const sum = (
       (weight.value + height.value - age.value + gender.value) *
       activity.value
     ).toFixed(0);
     console.log(sum);
+
     setResult(`${sum} kcal`);
   };
 
@@ -111,10 +114,10 @@ function App() {
         // isError={error}
         // name="activity"
         />
-        <Button
-        // onClick={getValidateAndCalculate}
-        /* calculate={getCalculate} */
-        />
+        <Button />
+        {/* onClick={getValidateAndCalculate}
+         calculate={getCalculate} */}
+
         <Result
           // placeholder={showText}
           result={result} /* result={getCalculate} */
