@@ -1,4 +1,4 @@
-const Input = ({ placeholder, min, max, onInput, isError }) => {
+const Input = ({ placeholder, min, max, isError, name }) => {
   // const { register } = useForm();
   // const onInput = (data) => {
   //   console.log(data);
@@ -17,6 +17,7 @@ const Input = ({ placeholder, min, max, onInput, isError }) => {
     <>
       {isError && <p className="error-text">Uzupełnij dane</p>}
       <input
+        name={name}
         // name="exampleRequired"
         // ref={register({ required: true })}
         isError
@@ -29,7 +30,7 @@ const Input = ({ placeholder, min, max, onInput, isError }) => {
         className={errorColorInput}
         // aria-label="Sizing example input"
         // aria-describedby="inputGroup-sizing-default"
-        onInput={onInput}
+        // onInput={onInput}
       />
     </>
   );

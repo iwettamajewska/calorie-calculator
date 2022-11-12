@@ -1,16 +1,17 @@
 import Option from "./Option";
 
-const Gender = ({ onChange, isError }) => {
+const Gender = ({ onChange, isError, name }) => {
   const errorColorSelectGender = isError ? "select error-blank" : "select";
 
   return (
     <>
       {isError && <p className="error-text">Uzupełnij dane</p>}
       <select
-        onChange={onChange}
+        // onChange={onChange}
         className={errorColorSelectGender}
         placeholder="płeć"
         required
+        name="gender"
         //   value={selectGender}
         //   onChange={(e) => {
         //     const selectedGender = e.target.value;
