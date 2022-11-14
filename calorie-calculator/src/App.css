@@ -18,12 +18,36 @@ body {
   background-size: cover;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+} */
+
+/* .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; */
+/* justify-content: center;
+  align-items: center;
+  gap: 10px; */
+
+input,
+select {
+  display: block;
+  margin: 0 auto;
+}
+
+input,
+select,
+.btn {
+  margin-top: 10px;
+}
+
+.activity-select {
+  margin-bottom: 10px;
 }
 
 .text {
