@@ -20,9 +20,21 @@ function App() {
 
   const onSubmit = (event) => {
     const { weight, height, age, activity, gender } = event.target;
+    // const { weight: {value: weightValue}, height: {value: heightValue}, age: {value: ageValue}, activity: {value: activityValue}, gender: {value: genderValue} } = event.target;
     event.preventDefault();
 
-    console.log(weight.value);
+    // const sum = (
+    //   (weightValue + heightValue - ageValue + genderValue) *
+    //   activityValue
+    // ).toFixed(0);
+
+    // 3 sposob
+    // const weight = event.target.weight.value
+    // const height = event.target.height.value
+
+    console.log(activity.value);
+    console.log(gender.value);
+    console.log(Number(weight.value));
 
     const sum = (
       (weight.value + height.value - age.value + gender.value) *
