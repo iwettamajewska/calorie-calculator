@@ -15,8 +15,8 @@ body {
   /* background-image: url("./images/bgImg.jpg"); */
   background-repeat: no-repeat;
   /* background-size: 100%; */
-  background-size: cover;
-  background-size: 100vw;
+  background-size: auto;
+  height: 100vh;
 }
 
 /* .container {

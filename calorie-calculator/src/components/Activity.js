@@ -23,6 +23,7 @@ const Activity = ({ onChange, activity }) => {
     <>
       {/* {isError && <p className="error-text">Uzupełnij dane</p>} */}
       <select
+        name="activity"
         onChange={onChange}
         value={activity}
         className="select activity-select"

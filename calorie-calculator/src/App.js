@@ -32,19 +32,26 @@ function App() {
     // const weight = event.target.weight.value
     // const height = event.target.height.value
 
-    console.log(activity.value);
-    console.log(gender.value);
+    console.log(typeof activity.value);
+    console.log(typeof height.value);
+    console.log(typeof weight.value);
+    console.log(typeof age.value);
+    console.log(typeof gender.value);
+
     console.log(Number(weight.value));
 
-    const sum = (
-      (weight.value + height.value - age.value + gender.value) *
-      activity.value
-    ).toFixed(0);
+    const sum =
+      (Number(weight.value) +
+        Number(height.value) -
+        Number(age.value) +
+        Number(gender.value)) *
+      Number(activity.value);
     console.log(sum);
 
-    setResult(`${sum} kcal`);
+    setResult(`${sum.toFixed()} kcal`);
   };
 
+  // toFixed(0);
   // const [height, setHeight] = useState(0);
   // const [age, setAge] = useState(0);
   // const [weight, setWeight] = useState(0);
