@@ -41,9 +41,9 @@ function App() {
     console.log(Number(weight.value));
 
     const sum =
-      (Number(weight.value) +
-        Number(height.value) -
-        Number(age.value) +
+      (Number(weight.value) * 10 +
+        Number(height.value) * 6.25 -
+        Number(age.value) * 5 +
         Number(gender.value)) *
       Number(activity.value);
     console.log(sum);
