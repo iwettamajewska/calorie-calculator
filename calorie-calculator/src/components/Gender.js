@@ -22,7 +22,7 @@ const Gender = () => {
         {/* <slot name="person-name">NAME MISSING</slot>
        <Option value disabled selected hidden optionText={"Płeć"} /> */}
         <Option
-          selected={true}
+          // selected={true}
           hidden={true}
           value={""}
           optionText="Wybierz płeć"

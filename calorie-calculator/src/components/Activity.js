@@ -41,7 +41,7 @@ const Activity = ({ onChange, activity }) => {
           Wybierz swoją aktywność
         </option> */}
         <Option
-          selected={true}
+          // selected={true}
           hidden={true}
           value={""}
           optionText="wybierz swoją aktywność"
