@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 16px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -44,16 +44,16 @@ select {
 input,
 select,
 .btn {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .activity-select {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .text {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 1.25rem;
+  padding-bottom: 0.625rem;
 }
 
 .top-calculator-cpm-text {
@@ -71,48 +71,48 @@ select,
 
 .explanation-text {
   margin: 0 auto;
-  margin-bottom: 40px;
-  padding: 20px 20px;
+  margin-bottom: 3rem;
+  padding: 1.25rem 1.25rem;
   background-color: rgba(213, 240, 197, 0.3);
   width: 60%;
-  border: 1px none rgb(255, 255, 255);
-  border-radius: 30px;
+  border: 0.06rem none rgb(255, 255, 255);
+  border-radius: 1.875;
   color: rgb(0, 0, 0);
 }
 
 .result-input {
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
   font-weight: 700;
 }
 
 .select,
 .input {
-  height: 50px;
-  width: 220px;
+  height: 3.125rem;
+  width: 13.75rem;
   border: 1px none rgb(255, 255, 255);
   background-color: white;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   /* line-height: 24px; */
-  padding: 10px;
+  padding: 0.625rem;
   /* box-shadow: 5px 5px 2px rgb(20, 14, 14, 0.3); */
   box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
   outline: none;
 }
 
 .activity-select {
-  min-width: 600px;
+  min-width: 37.5rem;
 }
 
 .btn-container {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .btn {
   background-color: rgb(76, 124, 72, 0.5);
-  width: 216px;
-  height: 50px;
-  border: 1px none rgb(255, 255, 255);
-  border-radius: 30px;
+  width: 13.5rem;
+  height: 3.125rem;
+  border: 0.06rem none rgb(255, 255, 255);
+  border-radius: 1.875rem;
   font-weight: 700;
   margin: 0 auto;
   /* box-shadow: 5px 5px 2px rgb(20, 14, 14, 0.3); */
@@ -131,12 +131,42 @@ select,
   /* opacity: 0.95; */
 }
 
-/* .error-blank {
-  /* border: 5px solid rgba(247, 49, 22, 0.2); */
-/* box-shadow: inset 0px 0px 59px -45px rgba(250, 5, 5, 1);
-} 
-*/
-/* .error-text {
-  font-size: 0.8rem;
-  color: rgb(247, 49, 22);
-} */
+@media screen and (min-width: 769px) {
+  /* .container {
+    display: flex;
+    justify-content: center;
+    display: block;
+    align-items: center;
+  } */
+  body {
+    /* background-repeat: repeat; */
+    /* background-size: contain; */
+    background-size: 100vh;
+    /* height: 80vh; */
+    width: 50rem;
+    height: 50rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    background-repeat: repeat;
+    /* background-size: contain; */
+    /* background-position: 20% 20%; */
+    background-size: contain;
+    background-color: rgb(207, 207, 90);
+    height: 100vh;
+    /* height: 200px; */
+    /* height: 100vh; */
+    /* background-attachment: scroll; */
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  body {
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: auto;
+    height: 100vh;
+  }
+}

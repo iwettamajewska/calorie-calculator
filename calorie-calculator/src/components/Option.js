@@ -11,10 +11,4 @@ const Option = ({ value, optionText, selected, hidden }) => {
   );
 };
 
-{
-  /* <option selected={true} hidden={true} value="">
-          Wybierz swoją aktywność
-        </option> */
-}
-
 export default Option;

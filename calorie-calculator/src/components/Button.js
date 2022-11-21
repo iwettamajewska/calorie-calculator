@@ -1,4 +1,4 @@
-const Button = ({ onClick, onSubmit }) => {
+const Button = ({ onClick }) => {
   return (
     <button onClick={onClick} className="btn" type="submit">
       Oblicz
@@ -7,5 +7,3 @@ const Button = ({ onClick, onSubmit }) => {
 };
 
 export default Button;
-
-// onSubmit={onSubmit}
