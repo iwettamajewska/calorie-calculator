@@ -151,16 +151,17 @@ select,
 @media screen and (min-width: 1025px) {
   body {
     background-repeat: repeat;
-    /* background-size: contain; */
-    /* background-position: 20% 20%; */
     background-size: contain;
     background-color: rgb(207, 207, 90);
     height: 100vh;
-    /* height: 200px; */
-    /* height: 100vh; */
-    /* background-attachment: scroll; */
   }
 }
+/* height: 200px; */
+/* height: 100vh; */
+/* background-attachment: scroll; */
+
+/* background-size: contain; */
+/* background-position: 20% 20%; */
 
 @media screen and (min-width: 1900px) {
   body {
