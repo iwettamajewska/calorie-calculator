@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -9,93 +9,71 @@
   color: rgba(0, 0, 0, 0.658);
 }
 
-body {
-  background-image: url("./images/bgImg.png");
-  /* background-color: 0.1; */
-  /* background-image: url("./images/bgImg.jpg"); */
-  background-repeat: no-repeat;
-  /* background-size: 100%; */
+html {
+  background-image: linear-gradient(
+    34deg,
+    rgba(75, 129, 81, 0.8) 0%,
+    rgba(42, 119, 34, 0.8) 17%,
+    rgba(161, 199, 74, 0.8) 77%
+  );
   background-size: auto;
-  height: 100vh;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-} */
-
-/* .container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap; */
-/* justify-content: center;
-  align-items: center;
-  gap: 10px; */
 
 input,
 select {
   display: block;
-  margin: 0 auto;
 }
 
+.top-calculator-cpm-text,
+.top-calculate-text,
 input,
 select,
-.btn {
-  margin-top: 0.625rem;
-}
-
-.activity-select {
+.btn,
+.result-input,
+.explanation-text {
+  margin: 0 auto;
   margin-bottom: 0.625rem;
-}
-
-.text {
-  padding-top: 1.25rem;
-  padding-bottom: 0.625rem;
 }
 
 .top-calculator-cpm-text {
   font-size: 1.2rem;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  color: rgb(0, 0, 0);
 }
 
 .top-calculate-text {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: rgb(0, 0, 0);
 }
 
 .explanation-text {
-  margin: 0 auto;
-  margin-bottom: 3rem;
   padding: 1.25rem 1.25rem;
   background-color: rgba(213, 240, 197, 0.3);
   width: 60%;
   border: 0.06rem none rgb(255, 255, 255);
-  border-radius: 1.875;
-  color: rgb(0, 0, 0);
 }
 
-.result-input {
-  margin-bottom: 0.9rem;
-  font-weight: 700;
+.select,
+.input,
+.btn,
+.explanation-text {
+  border-radius: 1.875rem;
+}
+
+.select,
+.input,
+.btn {
+  height: 3.125rem;
+  width: 13.75rem;
+  border: 1px none rgb(255, 255, 255);
+  box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
 }
 
 .select,
 .input {
-  height: 3.125rem;
-  width: 13.75rem;
-  border: 1px none rgb(255, 255, 255);
   background-color: white;
-  border-radius: 1.875rem;
-  /* line-height: 24px; */
   padding: 0.625rem;
-  /* box-shadow: 5px 5px 2px rgb(20, 14, 14, 0.3); */
-  box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
   outline: none;
 }
 
@@ -103,22 +81,15 @@ select,
   min-width: 37.5rem;
 }
 
-.btn-container {
-  margin-top: 1.25rem;
+.btn,
+.result-input {
+  font-weight: 700;
 }
 
 .btn {
   background-color: rgb(76, 124, 72, 0.5);
-  width: 13.5rem;
-  height: 3.125rem;
-  border: 0.06rem none rgb(255, 255, 255);
-  border-radius: 1.875rem;
-  font-weight: 700;
   margin: 0 auto;
-  /* box-shadow: 5px 5px 2px rgb(20, 14, 14, 0.3); */
-  box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
   transition: background-color 1s, color 1s;
-  /* transition: color 400ms ease; */
 }
 
 .btn:hover {
@@ -126,10 +97,17 @@ select,
   color: #ffffff;
 }
 
-::placeholder {
+/* ::placeholder {
   color: rgba(0, 0, 0, 0.658);
-  /* opacity: 0.95; */
+} */
+
+/* .option {
+  word-wrap: break-word;
 }
+
+.activity-select {
+  max-width: 50px;
+} */
 
 @media screen and (min-width: 769px) {
   /* .container {
@@ -138,24 +116,31 @@ select,
     display: block;
     align-items: center;
   } */
-  body {
-    /* background-repeat: repeat; */
-    /* background-size: contain; */
+  /* body {
+    background-repeat: repeat;
+    background-size: contain;
     background-size: 100vh;
-    /* height: 80vh; */
+    height: 80vh;
     width: 50rem;
     height: 50rem;
+  } */
+}
+
+@media screen and (min-width: 769px) {
+  .select,
+  .input,
+  .btn,
+  .explanation-text {
+    border-radius: 1.875rem;
   }
 }
 
-@media screen and (min-width: 1025px) {
-  body {
+/* body {
     background-repeat: repeat;
     background-size: contain;
     background-color: rgb(207, 207, 90);
     height: 100vh;
-  }
-}
+  } */
 /* height: 200px; */
 /* height: 100vh; */
 /* background-attachment: scroll; */
@@ -163,11 +148,12 @@ select,
 /* background-size: contain; */
 /* background-position: 20% 20%; */
 
-@media screen and (min-width: 1900px) {
-  body {
+@media screen and (min-width: 1025px) {
+}
+
+/* body {
     background-repeat: no-repeat;
-    /* background-size: 100%; */
+    background-size: 100%;
     background-size: auto;
     height: 100vh;
-  }
-}
+  } */
