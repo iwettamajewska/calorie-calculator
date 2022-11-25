@@ -15,14 +15,6 @@ function App() {
 
     event.preventDefault();
 
-    console.log(typeof activity.value);
-    console.log(typeof height.value);
-    console.log(typeof weight.value);
-    console.log(typeof age.value);
-    console.log(typeof gender.value);
-
-    console.log(Number(weight.value));
-
     const sum =
       (Number(weight.value) * 10 +
         Number(height.value) * 6.25 -

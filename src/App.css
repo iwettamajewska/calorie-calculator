@@ -9,17 +9,20 @@
   color: rgba(0, 0, 0, 0.658);
 }
 
-html {
+html,
+body {
   background-image: linear-gradient(
     34deg,
     rgba(75, 129, 81, 0.8) 0%,
     rgba(42, 119, 34, 0.8) 17%,
     rgba(161, 199, 74, 0.8) 77%
   );
-  background-size: auto;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: auto; */
+  /* background-position: right top; */
+  background-repeat: repeat;
+  /* background-size: 100%;
+  background-size: 100vh 100vw; */
+  /* background-position: center; */
 }
 
 input,
@@ -77,10 +80,6 @@ select,
   outline: none;
 }
 
-/* .activity-select {
-  min-width: 37.5rem;
-} */
-
 .btn,
 .result-input {
   font-weight: 700;
@@ -88,25 +87,15 @@ select,
 
 .btn {
   background-color: rgb(76, 124, 72, 0.5);
+  background-color: rgb(216, 160, 39);
   transition: background-color 1s, color 1s;
 }
 
 .btn:hover {
   background-color: rgb(76, 124, 72, 0.9);
+  background-color: rgb(173, 127, 28);
   color: #ffffff;
 }
-
-/* ::placeholder {
-  color: rgba(0, 0, 0, 0.658);
-} */
-
-/* .option {
-  word-wrap: break-word;
-}
-
-.activity-select {
-  max-width: 50px;
-} */
 
 @media screen and (max-width: 768px) {
   .top-calculate-text {
@@ -138,23 +127,10 @@ select,
 }
 
 @media screen and (min-width: 769px) {
-  /* .container {
-    display: flex;
-    justify-content: center;
-    display: block;
-    align-items: center;
-  } */
-  /* body {
-    background-repeat: repeat;
-    background-size: contain;
-    background-size: 100vh;
-    height: 80vh;
-    width: 50rem;
-    height: 50rem;
-  } */
-}
+  .activity-select {
+    width: auto;
+  }
 
-@media screen and (min-width: 769px) {
   .select,
   .input,
   .btn,
@@ -163,25 +139,5 @@ select,
   }
 }
 
-/* body {
-    background-repeat: repeat;
-    background-size: contain;
-    background-color: rgb(207, 207, 90);
-    height: 100vh;
-  } */
-/* height: 200px; */
-/* height: 100vh; */
-/* background-attachment: scroll; */
-
-/* background-size: contain; */
-/* background-position: 20% 20%; */
-
 @media screen and (min-width: 1025px) {
 }
-
-/* body {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-size: auto;
-    height: 100vh;
-  } */
