@@ -9,11 +9,13 @@
   color: rgba(0, 0, 0, 0.658);
 }
 
-html {
-  height: 100%;
+html,
+body {
+  height: fit-content;
+  min-height: 100%;
 }
 
-html {
+body {
   background-image: linear-gradient(
     34deg,
     rgba(75, 129, 81, 1) 0%,
@@ -65,6 +67,7 @@ select,
 .btn,
 .explanation-text {
   border-radius: 1.875rem;
+  text-align: center;
 }
 
 .select,
