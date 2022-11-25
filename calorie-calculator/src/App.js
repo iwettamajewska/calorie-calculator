@@ -4,7 +4,7 @@ import Activity from "./components/Activity";
 import Button from "./components/Button";
 import Result from "./components/Result";
 import Input from "./components/Input";
-import Explanation from "./Explanation";
+import Explanation from "./components/Explanation";
 import { useState } from "react";
 
 function App() {
@@ -29,7 +29,6 @@ function App() {
         Number(age.value) * 5 +
         Number(gender.value)) *
       Number(activity.value);
-    console.log(sum);
 
     setResult(`${sum.toFixed()} kcal`);
   };
