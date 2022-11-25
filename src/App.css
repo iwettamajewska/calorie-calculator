@@ -67,7 +67,6 @@ select,
 .btn,
 .explanation-text {
   border-radius: 1.875rem;
-  text-align: -webkit-center;
 }
 
 .select,
