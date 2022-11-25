@@ -77,9 +77,9 @@ select,
   outline: none;
 }
 
-.activity-select {
+/* .activity-select {
   min-width: 37.5rem;
-}
+} */
 
 .btn,
 .result-input {
@@ -107,6 +107,35 @@ select,
 .activity-select {
   max-width: 50px;
 } */
+
+@media screen and (max-width: 768px) {
+  .top-calculate-text {
+    width: 90vw;
+  }
+
+  .select,
+  .input,
+  .btn,
+  .explanation-text {
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    min-width: 90vw;
+  }
+
+  .activity-select {
+    /* word-wrap: break-word; */
+    /* width: 10rem; */
+    /* min-width: 13.75rem; */
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    /* hyphens: manual; */
+  }
+
+  .explanation-text {
+    font-size: 0.8rem;
+    width: 75vw;
+  }
+}
 
 @media screen and (min-width: 769px) {
   /* .container {
