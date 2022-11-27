@@ -22,17 +22,14 @@ body {
     rgba(42, 119, 34, 1) 17%,
     rgba(161, 199, 74, 1) 77%
   );
-  /* background-size: auto; */
-  /* background-position: right top; */
-  /* background-repeat: repeat; */
-  /* background-size: 100%;
-  background-size: 100vh 100vw; */
-  /* background-position: center; */
 }
 
 input,
 select {
   display: block;
+  background-color: white;
+  padding: 0.625rem;
+  outline: none;
 }
 
 .top-calculator-cpm-text,
@@ -46,13 +43,13 @@ select,
   margin-bottom: 0.625rem;
 }
 
-.top-calculator-cpm-text {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-}
-
+.top-calculator-cpm-text,
 .top-calculate-text {
   font-size: 1.2rem;
+}
+
+.top-calculator-cpm-text {
+  margin-top: 2rem;
 }
 
 .explanation-text {
@@ -64,25 +61,11 @@ select,
 
 .select,
 .input,
-.btn,
-.explanation-text {
-  border-radius: 1.875rem;
-}
-
-.select,
-.input,
 .btn {
   height: 3.125rem;
   width: 13.75rem;
   border: 1px none rgb(255, 255, 255);
   box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
-}
-
-.select,
-.input {
-  background-color: white;
-  padding: 0.625rem;
-  outline: none;
 }
 
 .btn,
@@ -91,15 +74,7 @@ select,
 }
 
 .btn {
-  background-color: rgb(76, 124, 72, 0.5);
   background-color: rgb(216, 160, 39);
-  transition: background-color 1s, color 1s;
-}
-
-.btn:hover {
-  background-color: rgb(76, 124, 72, 0.9);
-  background-color: rgb(173, 127, 28);
-  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
@@ -107,28 +82,33 @@ select,
     width: 90vw;
   }
 
+  .activity-select,
+  .explanation-text {
+    min-width: 90vw;
+  }
+
+  .explanation-text {
+    width: 75vw;
+  }
+
+  .select,
+  .input,
+  .btn,
+  .explanation-text {
+    font-size: 0.8rem;
+  }
+
   .select,
   .input,
   .btn,
   .explanation-text {
     border-radius: 0.5rem;
-    font-size: 0.8rem;
-    min-width: 90vw;
   }
 
-  .activity-select {
-    /* word-wrap: break-word; */
-    /* width: 10rem; */
-    /* min-width: 13.75rem; */
+  /* .activity-select {
     inline-size: 150px;
     overflow-wrap: break-word;
-    /* hyphens: manual; */
-  }
-
-  .explanation-text {
-    font-size: 0.8rem;
-    width: 75vw;
-  }
+  } */
 }
 
 @media screen and (min-width: 769px) {
@@ -142,7 +122,13 @@ select,
   .explanation-text {
     border-radius: 1.875rem;
   }
-}
 
-@media screen and (min-width: 1025px) {
+  .btn {
+    transition: background-color 1s, color 1s;
+  }
+
+  .btn:hover {
+    background-color: rgb(238, 172, 29);
+    color: rgb(255, 255, 255);
+  }
 }
