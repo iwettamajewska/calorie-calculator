@@ -32,8 +32,7 @@ select {
   outline: none;
 }
 
-.top-calculator-cpm-text,
-.top-calculate-text,
+.top-text,
 input,
 select,
 .btn,
@@ -43,9 +42,11 @@ select,
   margin-bottom: 0.625rem;
 }
 
-.top-calculator-cpm-text,
-.top-calculate-text {
-  font-size: 1.2rem;
+.select,
+.input,
+.btn,
+.explanation-text {
+  font-size: 0.8rem;
 }
 
 .top-calculator-cpm-text {
@@ -55,17 +56,34 @@ select,
 .explanation-text {
   padding: 1.25rem 1.25rem;
   background-color: rgba(213, 240, 197, 0.3);
-  width: 60%;
   border: 0.06rem none rgb(255, 255, 255);
+}
+
+.top-calculate-text,
+.gender-select,
+.activity-select,
+.input,
+.btn {
+  min-width: 90vw;
+}
+
+.explanation-text {
+  max-width: 90vw;
 }
 
 .select,
 .input,
 .btn {
   height: 3.125rem;
-  width: 13.75rem;
   border: 1px none rgb(255, 255, 255);
   box-shadow: 0px 28px 51px -18px rgba(66, 68, 90, 1);
+}
+
+.select,
+.input,
+.btn,
+.explanation-text {
+  border-radius: 0.5rem;
 }
 
 .btn,
@@ -77,43 +95,26 @@ select,
   background-color: rgb(216, 160, 39);
 }
 
-@media screen and (max-width: 768px) {
-  .top-calculate-text {
-    width: 90vw;
-  }
-
-  .activity-select,
-  .explanation-text {
-    min-width: 90vw;
-  }
-
-  .explanation-text {
-    width: 75vw;
-  }
-
-  .select,
-  .input,
-  .btn,
-  .explanation-text {
-    font-size: 0.8rem;
-  }
-
-  .select,
-  .input,
-  .btn,
-  .explanation-text {
-    border-radius: 0.5rem;
-  }
-
-  /* .activity-select {
-    inline-size: 150px;
-    overflow-wrap: break-word;
-  } */
-}
-
 @media screen and (min-width: 769px) {
+  .top-text {
+    font-size: 1.2rem;
+  }
+
+  .select,
+  .input,
+  .btn,
+  .explanation-text {
+    font-size: 1rem;
+  }
+
+  .gender-select,
+  .input,
+  .btn {
+    min-width: 13.75rem;
+  }
+
   .activity-select {
-    width: auto;
+    min-width: auto;
   }
 
   .select,
@@ -130,5 +131,9 @@ select,
   .btn:hover {
     background-color: rgb(238, 172, 29);
     color: rgb(255, 255, 255);
+  }
+
+  .explanation-text {
+    max-width: 60%;
   }
 }

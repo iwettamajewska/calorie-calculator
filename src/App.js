@@ -27,8 +27,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="top-calculator-cpm-text">Kalkulator CPM</h1>
-      <h2 className="top-calculate-text">
+      <h1 className="top-calculator-cpm-text top-text">Kalkulator CPM</h1>
+      <h2 className="top-calculate-text top-text">
         Oblicz swoją całkowitą przemianę materii
       </h2>
       <form onSubmit={onSubmit}>
