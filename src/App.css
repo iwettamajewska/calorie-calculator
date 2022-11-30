@@ -56,7 +56,8 @@ select,
 .explanation-text {
   padding: 1.25rem 1.25rem;
   background-color: rgba(213, 240, 197, 0.3);
-  border: 0.06rem none rgb(255, 255, 255);
+  /* border: 0.06rem none rgb(255, 255, 255); */
+  border: none;
 }
 
 .top-calculate-text,
